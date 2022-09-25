@@ -1,0 +1,641 @@
+:root{
+    --letra-oscura:#1D1D1B;
+    --color-caja-Rosa:#FB088C;
+    --color-caja-negra:#212222;
+   }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 0.625em; /* 1rem = 10px */
+    overflow-x:hidden;
+}
+
+body{
+    font-size: 1.6rem; /*16px*/
+    font-family:'DM Sans', sans-serif;
+    color: #000;
+    background-color:white;
+    overflow-x:hidden;
+}
+
+iframe {
+    border: 0;
+}
+
+button{
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/*CONTENEDOR*/
+
+#contenedor{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+
+#site-header{
+    
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#caja-top{
+    
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed; /*fixed*/
+    top:0px;
+    z-index: 400;
+    padding: 20px;   
+}
+
+#caja-top #imagen-logo img{
+    object-fit: cover;
+    width: 60%;
+    max-width: 450px;
+    margin-left:0px;
+    margin-top:10px ;   
+}
+
+#caja-top.colorFondo{
+    background-color:black;
+    opacity: 0.8;
+    transition: 0.8s;
+}
+
+#btn.colorFondo span{
+    background-color:white;
+    transition: 0.8s;
+}
+
+#siteNav.colorFondo #menu a{
+    color: var(--letra-oscura);
+}
+
+#btn{
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 35px;
+    right: 40px; 
+    z-index: 100;  
+}
+
+#btn span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: black;
+    transition-duration: 0.5s;   
+}
+
+#btn.efecto span{
+    background-color: var(--letra-oscura);
+}
+
+#btn span:nth-child(1){
+    top: 0%;
+  
+}
+
+#btn span:nth-child(2){
+    top: 100%;
+    transform: translateY(-100%);  
+}
+
+#btn.efecto span:nth-child(1){
+    top:50%;
+transform: translateY(-50%) rotate(45deg);
+}
+
+ #btn.efecto span:nth-child(2){
+top:50%;
+transform: translateY(-50%) rotate(-45deg);
+}
+
+/*SITE NAV Y EFECTOS*/
+#site-nav{    
+ 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    overflow-y:hidden;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    transition: 0.6s;
+    transform: translateX(-150%); 
+     
+}
+
+ #site-nav.mostrar{
+    transform: translateX(0%);   
+    transition: 0.4s ;
+    }
+
+#site-nav #menu li{
+    list-style: none;
+    position: relative; 
+     overflow: hidden;
+}
+
+#site-nav #menu li:nth-of-type(n+1){
+    margin-bottom: 0px;
+    }
+
+    #site-nav #menu a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    border: none;
+    font-size: 5rem;
+    color:var(--letra-oscura);
+    transition: 0.3s;
+    text-align: center;
+    line-height: 2;
+    margin-top: 20px;
+    padding-top: 80px;
+}
+
+
+#site-nav #menu a:hover{
+    opacity: 0.6;
+}
+
+/* ESTILOS GENERALES*/
+
+
+#contenedor-articulos{
+    width: 100%;
+    max-width: 1000px;
+   margin-top: 0px;  
+ }
+ 
+ li{
+     list-style: none;
+ }
+ 
+ .art h2{
+     font-size: 20rem;
+ }
+
+ /*ARTÍCULO GENERAL*/
+
+article{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.art{
+    position: relative;
+    padding: 10px;
+    margin-top: 200px;
+}
+
+/*ARTÍCULO 1*/
+
+h1 .texto-art-uno-uno, .texto-art-uno-dos, .texto-art-uno-tres{
+    width: 60%;
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10rem;   
+}
+
+.texto-art-uno-uno{
+   position:absolute ;
+   z-index: -10;
+   top:-400%;
+   left:30%;
+   display: block; 
+}
+
+.texto-art-uno-dos{
+  position: absolute;
+  top:200%;
+  right: 70%;
+  z-index: 4;
+  border-top: 1px solid black;
+border-bottom: 1px solid black;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.texto-art-uno-tres{
+   position:absolute ;
+   top:1000%;
+   left: 30%;
+   z-index: -7;
+  display: block; 
+}
+
+.taza img{
+    position:absolute ;
+    top:-170%;
+    left:30%;
+    z-index: 1;
+   display: block; 
+    width: 85%;
+  }
+
+  /*ARTICULO 2*/
+
+span.puntoRosa{
+    position: absolute;
+    top: 16.5%;
+    left: 1%;
+    width: 15px;
+    height: 15px;
+    background-color: #FB088C;
+   border-radius: 50%;   
+}
+
+.texto-art-dos p{
+  padding-top: 150px;
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 2;
+    font-size:1.5em;   
+}
+
+.cuadradoNegro{
+   position: absolute;
+   top: 67.5%;
+    width: 25px;
+    height: 10px;
+    background-color:#212222;  
+}
+
+.cuadradoRosa{
+   position: absolute;
+   top:67.5% ;
+   left: 13%;
+     width: 25px;
+     height: 10px;
+     background-color:#FB088C;
+}
+
+.cuadradoRosaDos{
+    position: absolute;
+   margin-top:20px ;
+     width: 25px;
+     height: 10px;
+     background-color:#FB088C;
+}
+
+#section-uno a, #section-dos a{
+    display: block;    
+    margin-top:70px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: #212222;
+    border-bottom: 1px solid #212222;
+}
+
+/*SECCION UNO*/
+#section-uno h4, #section-dos h4{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.art #section-uno{
+    margin-top:10%;
+}
+
+#section-uno .camiseta{
+    position: absolute;
+    top:-10%;
+    left:40%;
+    z-index: -1;
+    padding-left:0px;     
+}
+
+#section-uno img{
+   width:140%;
+   transform: scaleX(-1) rotate(-15deg);
+}
+
+#section-uno p, #section-dos p{
+    width: 70%;
+    font-weight: 400;
+    line-height: 2;
+    font-size:1em;
+}
+
+
+/*SECCINO DOS*/
+
+#art-dos{
+    padding-top:15% ;
+}
+
+#art-dos .bote{
+    position: absolute;
+    top:-20%;
+    left: 50%;
+    z-index: -1; 
+}
+
+#section-dos img{
+    width: 110%;
+    margin-bottom: 40%;
+ }
+
+
+ /*FOOTER*/
+
+ footer{
+    position:relative;
+    margin-top: 150px;
+    background-color: #212222;
+    width: 100%;
+    padding:20px;
+ }
+
+#site-footer h5{
+    color: whitesmoke;
+    line-height:1.5em;
+    font-size: 2.5rem;
+ }
+
+ #site-footer form{
+padding-top: 30px;
+color: white;
+}
+
+input{
+    background-color: transparent;
+}
+
+.derechos input[type=checkbox]:checked{
+    color:transparent}
+
+
+fieldset{
+    padding-top: 20px;
+    border:none;
+}
+
+.derechos a{
+     color: white;
+}
+
+button{
+    display: block;
+    margin-top: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#contacto p{
+    color: whitesmoke;
+    margin-top: 40px;
+    font-weight: 200;
+}
+
+
+ @media screen and (min-width: 400px) {
+  
+    #btn{
+        display: none;
+    }
+    
+    #imagen-logo.efecto{
+        filter:none;
+    }
+    
+    #site-header{
+        display: flex;
+        flex-direction: row;
+        width: 90%;    
+    }
+    
+    #site-nav{   
+        height: auto;
+        align-items: flex-end; 
+        background-image: none;
+        transform: translateX(0%); 
+    }
+
+    #site-nav #menu a{
+        margin-top: 10px;
+        padding:15px;
+    }
+    
+    #site-nav.colorFondo{
+        background-color:black ;
+        opacity: 0.8;
+    }
+    
+    #site-nav.colorFondo a{ 
+        color: white !important;
+    }
+    
+    .efecto #site-nav #menu a{
+        color:var(--letra-oscura);
+    }
+    #caja-top{
+        padding: 0px;
+    }
+    
+    #site-nav #menu{
+        display: flex;
+       
+    }
+    #site-nav #menu a{
+        font-size: 2rem;
+        color:var(--tipo-oscsuro);
+     
+    }
+    
+    #site-nav #menu li:nth-of-type(n+1){
+        margin-left: 20px;
+    }
+
+    #caja-top #imagen-logo{
+        margin-top: 5px;
+        max-width: 800px;
+        position: fixed;
+        z-index: 1900;
+        padding: 10px;  
+    }
+     
+    body.efecto{
+        overflow-y: visible;
+    }
+
+    #site-main{
+        width: 70%;
+    }
+
+    #art-uno{
+        margin-left:15%;
+    }
+
+    .texto-art-uno-uno{
+        position:absolute ;
+        z-index: -10;
+        top:-600%;
+        left:10%;    
+     }
+     
+     .texto-art-uno-dos{
+       position: absolute;
+       top:200%;
+       right:10%;
+       z-index: 4;
+       padding-top: 5px;
+       padding-bottom: 5px;
+     }
+      
+     .texto-art-uno-tres{
+        position:absolute ;
+        top:1000%;
+      left: 15%;
+      padding-top: 30px;
+     }
+
+     .taza img{
+       position: absolute;
+       top:-700%;
+       display: block; 
+       margin-left: 20%; 
+       width:75%;   
+      }
+
+    h1 .texto-art-uno-uno, .texto-art-uno-dos, .texto-art-uno-tres{
+         font-size: 13rem;
+         margin: 30px;  
+    }
+    
+    #art-uno{
+    margin-top: 250px;
+    margin-right: 50%;
+}
+
+span.puntoRosa{
+    position: absolute;
+    top: 26.5%;
+    left:42%;  
+}
+
+ .texto-art-dos p{
+  padding-top: 300px;
+  padding-bottom:200px;
+    width: 60%;
+  transform: translateX(40%);
+    }
+
+   #section-uno a, #section-dos a{
+        width: 80%;
+    }
+
+  #section-uno a:hover {
+        color: #FB088C;
+
+    }
+    #section-dos a:hover{
+        color: #FB088C;
+    }
+
+
+    i:hover{
+        color: #FB088C;
+    }
+
+ /*SECCION UNO*/
+
+#section-uno h4, #section-dos h4{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+#section-uno{
+    margin-top: 100px;
+    margin-left: 20%;
+}
+
+#section-uno .camiseta{
+    position: absolute;
+    top:-20%;
+    left:40%;
+    z-index: -1; 
+}
+
+#section-uno img{
+   width:70%;
+   transform: scaleX(-1) rotate(-10deg);
+}
+
+#section-uno p, #section-dos p{
+    width: 50%;
+    font-weight: 400;
+    line-height: 2;
+    font-size:2rem;
+}
+
+.cuadradoRosa{
+   left:6%;
+}
+
+/*SECCINO DOS*/
+
+#section-dos{
+   transform: translateX(40%);
+}
+
+#section-dos img{
+    width: 50%;
+    margin-bottom: 40%;
+ }
+
+ /*FOOTER*/
+
+ #cajaFlex{
+    display: flex;
+    flex-direction:column ;
+    margin: auto 0;
+    justify-content: center;   
+ }
+
+ #cajaFlexDos{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;  
+ }
+
+
+#contacto p{
+    color: whitesmoke;
+    margin-top: 10px;
+    font-weight: 200;
+    margin-right: 60px;
+}
+
+
+    }
+
+
+
